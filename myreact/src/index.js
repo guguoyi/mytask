@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './App'
 import reportWebVitals from './reportWebVitals';
+import Dialog from './Dialog';
 // import { name } from 'file-loader';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -55,7 +56,7 @@ const fruitList = [{ name: "apple", id: 1, isFruit: true, }, { name: "Gralic", i
 function FruistList() {
     return fruitList.map(item => {
         return (
-            <li id={item.id} style={{"color" : item.isFruit ? "green" : "darkblue"}}>{item.name}</li>
+            <li id={item.id} style={{ "color": item.isFruit ? "green" : "darkblue" }}>{item.name}</li>
         )
     })
 }
@@ -83,15 +84,45 @@ root.render(
         <Profile />
 
         <img className='avatar' src='https://t9.baidu.com/it/u=400853061,199832501&fm=193'></img>
-        <br/>
+        <br />
         <h2>水果列表</h2>
-        <FruistList/> 
-
+        <FruistList />
         <App />
+
+        <Dialog>this is a good dialog</Dialog>
+
+        {/* build Dialog component */}
+        <Dialog>
+            <div className='header-box' style={{
+                display: 'flex',
+                width: 200,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+            }}>
+                <div>Name</div>
+                <div>Age</div>
+            </div>
+            <div className='list-item' style={{
+                display: 'flex',
+                width: 200,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+            }}>
+                <div>张三</div>
+                <div>10</div>
+            </div>
+
+            <div className='list-item' style={{
+                display: 'flex',
+                width: 200,
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+            }}>
+
+                <div>王五</div>
+                <div>15</div>
+            </div>
+        </Dialog>
     </>
 )
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
