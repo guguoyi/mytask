@@ -6,6 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import Dialog from './Dialog';
 import Vote from './Vote'
 
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
 function MyButton({ onClick, count }) {
@@ -123,7 +124,6 @@ root.render(
                 <div>15</div>
             </div>
         </Dialog>
-
         <Vote></Vote>
     </>
 )
