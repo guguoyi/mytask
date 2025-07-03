@@ -4,7 +4,8 @@ import './index.css';
 import App from './App'
 import reportWebVitals from './reportWebVitals';
 import Dialog from './Dialog';
-// import { name } from 'file-loader';
+import Vote from './Vote'
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -123,6 +124,7 @@ root.render(
                 <div>15</div>
             </div>
         </Dialog>
+        <Vote></Vote>
     </>
 )
 reportWebVitals();
