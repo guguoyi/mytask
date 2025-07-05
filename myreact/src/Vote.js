@@ -9,6 +9,11 @@ class Vote extends React.Component {
     super(props);
   }
 
+  state = {
+    supNum: 10,
+    oppNum: 5,
+  };
+
   VoteP = z.object({
     title: z.string().nonempty(),
     totalNUm: z.number().optional(),
@@ -32,11 +37,32 @@ class Vote extends React.Component {
     return (
       <div className="vote-box">
         <h2>{voteP.title}</h2>
-        <div>总数： 15</div>
-        <div>赞成：10</div>
-        <div>反对：5</div>
-        <button onClick={() => {}}>同意</button>
-        <button onClick={() => {}}>反对</button>
+        <div>总数： {this.state.supNum + this.state.oppNum}</div>
+        <div>赞成：{this.state.supNum}</div>
+        <div>反对：{this.state.oppNum}</div>
+        <button
+          onClick={() => {
+            this.state.supNum = this.state.supNum + 1;
+            this.setState({
+              supNum: this.state.supNum,
+            });
+            console.log(this.state.supNum);
+          }}
+        >
+          同意
+        </button>
+        <button
+          onClick={() => {
+            this.state.oppNum = this.state.oppNum + 1;
+            this.setState({
+              oppNum: this.state.oppNum,
+            });
+            // this.forceUpdate(); 强制视图更新，不建议使用
+            console.log(this.state.oppNum);
+          }}
+        >
+          反对
+        </button>
       </div>
     );
   }
