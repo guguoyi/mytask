@@ -136,7 +136,79 @@ root.render(
       </div>
     </Dialog>
     <br></br>
-    <Vote title="一起学 React 把"></Vote>
+    <Vote title="一起学 React 吧"></Vote>
   </>
 );
+
+// only test parent component change props of child component
+// setTimeout(() => {
+//   root.render(
+//     <>
+//       <h2>今日新闻</h2>
+//       <ul>
+//         {objs.map((item) => (
+//           <li key={item.id}>{item.title}</li>
+//         ))}
+//       </ul>
+
+//       <MultipleButtons></MultipleButtons>
+//       <Profile />
+
+//       <div>
+//         <img
+//           className="avatar"
+//           src="https://t9.baidu.com/it/u=400853061,199832501&fm=193"
+//         ></img>
+//       </div>
+//       <br />
+//       <h2>水果列表</h2>
+//       <FruistList />
+//       <br></br>
+//       <App />
+//       <br></br>
+//       {/* build Dialog component */}
+//       <Dialog title="One Dialog">
+//         <div
+//           className="header-box"
+//           style={{
+//             display: "flex",
+//             width: 200,
+//             flexDirection: "row",
+//             justifyContent: "space-around",
+//           }}
+//         >
+//           <div>Name</div>
+//           <div>Age</div>
+//         </div>
+//         <div
+//           className="list-item"
+//           style={{
+//             display: "flex",
+//             width: 200,
+//             flexDirection: "row",
+//             justifyContent: "space-around",
+//           }}
+//         >
+//           <div>张三</div>
+//           <div>10</div>
+//         </div>
+
+//         <div
+//           className="list-item"
+//           style={{
+//             display: "flex",
+//             width: 200,
+//             flexDirection: "row",
+//             justifyContent: "space-around",
+//           }}
+//         >
+//           <div>王五</div>
+//           <div>15</div>
+//         </div>
+//       </Dialog>
+//       <br></br>
+//       <Vote title="2 秒更新 title"></Vote>
+//     </>
+//   );
+// }, 2000);
 reportWebVitals();

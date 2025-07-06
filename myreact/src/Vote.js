@@ -19,6 +19,44 @@ class Vote extends React.Component {
     totalNUm: z.number().optional(),
   });
 
+  // 加载组件前
+  // only call once
+  componentWillMount() {
+    console.log("componentWillMount work before render", this.state);
+  }
+
+  // only call once
+  UNSAFE_componentWillMount() {
+    console.log("UNSAFE_componentWillMount work before render", this.state);
+  }
+
+  // only call once
+  componentDidMount() {
+    // Setting state here will trigger re-rendering.
+    console.log("componentDidMount", this.state);
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContent) {
+    console.log("shouldComponentUpdate", nextState);
+    // return false, will avoid view refresh.
+    // UNSAFE_componentWillUpdate and componentDidUpdate will not call.
+    // return false;
+
+    return true;
+  }
+
+  UNSAFE_componentWillUpdate(nextProps, nextState, nextContent) {
+    console.log("UNSAFE_componentWillUpdate", nextState);
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("componentDidUpdate", prevState, snapshot);
+  }
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    console.log("UNSAFE_componentWillReceiveProps", this.props, nextProps);
+  }
+
   render() {
     let { title } = this.props;
     let voteP = { title };
