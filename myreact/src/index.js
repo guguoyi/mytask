@@ -5,6 +5,7 @@ import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import Dialog from "./Dialog";
 import Vote from "./Vote";
+import RefDemo from "./RefDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -137,6 +138,8 @@ root.render(
     </Dialog>
     <br></br>
     <Vote title="一起学 React 吧"></Vote>
+    <br></br>
+    <RefDemo>RefDemo</RefDemo>
   </>
 );
 
