@@ -6,6 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 import Dialog from "./Dialog";
 import Vote from "./Vote";
 import RefDemo from "./RefDemo";
+import SynethicEventDemo from "./SynethicEventDemo";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -140,6 +141,8 @@ root.render(
     <Vote title="一起学 React 吧"></Vote>
     <br></br>
     <RefDemo>RefDemo</RefDemo>
+    <br></br>
+    <SynethicEventDemo></SynethicEventDemo>
   </>
 );
 
