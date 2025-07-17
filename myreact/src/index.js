@@ -7,6 +7,7 @@ import Dialog from "./Dialog";
 import Vote from "./Vote";
 import RefDemo from "./RefDemo";
 import SynethicEventDemo from "./SynethicEventDemo";
+import AddEventForList from "./AddEventForList";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -143,6 +144,8 @@ root.render(
     <RefDemo>RefDemo</RefDemo>
     <br></br>
     <SynethicEventDemo></SynethicEventDemo>
+    <br></br>
+    <AddEventForList></AddEventForList>
   </>
 );
 
