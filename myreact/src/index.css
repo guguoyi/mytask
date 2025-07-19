@@ -17,3 +17,24 @@ code {
   width: 100px;
   height: 200px;
 }
+
+
+.custom-btn {
+  padding: 10px 24px;
+  margin: 8px 12px;
+  background: linear-gradient(90deg, #6a5af9 0%, #8f6fff 100%);
+  color: #fff;
+  border: none;
+  border-radius: 25px;
+  font-size: 15px;
+  font-weight: 300;
+  box-shadow: 0 2px 8px rgba(106, 90, 249, 0.12);
+  cursor: pointer;
+  transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+}
+
+.custom-btn:hover {
+  background: linear-gradient(90deg, #8f6fff 0%, #6a5af9 100%);
+  transform: translateY(-2px) scale(1.04);
+  box-shadow: 0 4px 16px rgba(106, 90, 249, 0.18);
+}
