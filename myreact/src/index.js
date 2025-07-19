@@ -8,6 +8,7 @@ import Vote from "./Vote";
 import RefDemo from "./RefDemo";
 import SynethicEventDemo from "./SynethicEventDemo";
 import AddEventForList from "./AddEventForList";
+import TaskManagementSystem from "./TaskManagementSystem";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -146,6 +147,8 @@ root.render(
     <SynethicEventDemo></SynethicEventDemo>
     <br></br>
     <AddEventForList></AddEventForList>
+    <br></br>
+    <TaskManagementSystem></TaskManagementSystem>
   </>
 );
 
