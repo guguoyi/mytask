@@ -1,0 +1,111 @@
+.task-management-system {
+    width: 100%;
+    min-height: 100vh;
+    background-color: #f5f7fa;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 30px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    box-shadow: 0 4px 20px rgba(102, 126, 234, 0.3);
+    border-radius: 0 0 20px 20px;
+    margin-bottom: 30px;
+    backdrop-filter: blur(10px);
+    min-height: 70px;
+}
+
+.header span {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    margin-right: auto;
+}
+
+.task-management-system .search-bar {
+    width: 180px !important;
+    margin: 0 20px;
+}
+
+.task-management-system .search-bar .ant-select-selector {
+    border-radius: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.task-management-system .search-bar .ant-select-selector:hover,
+.task-management-system .search-bar .ant-select-selector:focus {
+    border-color: rgba(255, 255, 255, 0.5);
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.task-management-system .search-bar .ant-select-arrow {
+    color: white;
+}
+
+.task-management-system .search-bar .ant-select-selection-placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.primary-btn {
+    background: linear-gradient(135deg, #ff7b7b 0%, #667eea 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 24px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.task-list {
+    padding: 0 30px;
+}
+
+.ant-table {
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.ant-table-thead > tr > th {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    font-weight: 600;
+    border: none;
+}
+
+.ant-table-tbody > tr:hover > td {
+    background-color: rgba(102, 126, 234, 0.1);
+}
+
+.ant-modal-footer .ant-btn {
+    background: linear-gradient(135deg, #ff7b7b 0%, #667eea 100%);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-weight: 600;
+    font-size: 16px;
+    padding: 8px 24px;
+    box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}

@@ -9,10 +9,53 @@ class Vote extends React.Component {
     super(props);
   }
 
+  state = {
+    supNum: 10,
+    oppNum: 5,
+  };
+
   VoteP = z.object({
     title: z.string().nonempty(),
     totalNUm: z.number().optional(),
   });
+
+  // 加载组件前
+  // only call once
+  componentWillMount() {
+    console.log("componentWillMount work before render", this.state);
+  }
+
+  // only call once
+  UNSAFE_componentWillMount() {
+    console.log("UNSAFE_componentWillMount work before render", this.state);
+  }
+
+  // only call once
+  componentDidMount() {
+    // Setting state here will trigger re-rendering.
+    console.log("componentDidMount", this.state);
+  }
+
+  shouldComponentUpdate(nextProps, nextState, nextContent) {
+    console.log("shouldComponentUpdate", nextState);
+    // return false, will avoid view refresh.
+    // UNSAFE_componentWillUpdate and componentDidUpdate will not call.
+    // return false;
+
+    return true;
+  }
+
+  UNSAFE_componentWillUpdate(nextProps, nextState, nextContent) {
+    console.log("UNSAFE_componentWillUpdate", nextState);
+  }
+
+  componentDidUpdate(prevProps, prevState, snapshot) {
+    console.log("componentDidUpdate", prevState, snapshot);
+  }
+
+  UNSAFE_componentWillReceiveProps(nextProps) {
+    console.log("UNSAFE_componentWillReceiveProps", this.props, nextProps);
+  }
 
   render() {
     let { title } = this.props;
@@ -32,11 +75,32 @@ class Vote extends React.Component {
     return (
       <div className="vote-box">
         <h2>{voteP.title}</h2>
-        <div>总数： 15</div>
-        <div>赞成：10</div>
-        <div>反对：5</div>
-        <button onClick={() => {}}>同意</button>
-        <button onClick={() => {}}>反对</button>
+        <div>总数： {this.state.supNum + this.state.oppNum}</div>
+        <div>赞成：{this.state.supNum}</div>
+        <div>反对：{this.state.oppNum}</div>
+        <button
+          onClick={() => {
+            this.state.supNum = this.state.supNum + 1;
+            this.setState({
+              supNum: this.state.supNum,
+            });
+            console.log(this.state.supNum);
+          }}
+        >
+          同意
+        </button>
+        <button
+          onClick={() => {
+            this.state.oppNum = this.state.oppNum + 1;
+            this.setState({
+              oppNum: this.state.oppNum,
+            });
+            // this.forceUpdate(); 强制视图更新，不建议使用
+            console.log(this.state.oppNum);
+          }}
+        >
+          反对
+        </button>
       </div>
     );
   }
