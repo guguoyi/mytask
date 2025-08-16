@@ -10,6 +10,16 @@ import SynethicEventDemo from "./SynethicEventDemo";
 import AddEventForList from "./AddEventForList";
 // import TaskManagementSystem from "./TaskManagementSystem";
 import TaskManagementSystem1 from "./views/taskManager/TaskManagementSystem1";
+import UseStateDemo from "./hooks/UseStateDemo";
+import UseEffectDemo from "./hooks/UseEffectDemo";
+import UseContextDemo, {ThemeContext} from "./hooks/UseContextDemo";
+import UseReducerDemo from "./hooks/UseReducerDemo";
+import UseCallBackDemo from "./hooks/UseCallBackDemo";
+import UseMemoDemo from "./hooks/UseMemoDemo";
+import UseRefDemo from "./hooks/UseRefDemo";
+import UseCustomHook from "./hooks/UseCustomHookDemo";
+
+// const ThemeContext = React.createContext('light');
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 
@@ -151,7 +161,45 @@ root.render(
     <br></br>
     {/* <TaskManagementSystem></TaskManagementSystem> */}
 
-    <TaskManagementSystem1></TaskManagementSystem1>
+    {/* <TaskManagementSystem1></TaskManagementSystem1> */}
+
+    <UseStateDemo></UseStateDemo>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <UseEffectDemo></UseEffectDemo>
+
+    <br></br>
+    <br></br>
+    <hr></hr>
+
+    <ThemeContext.Provider value="light">
+        <UseContextDemo></UseContextDemo>
+    </ThemeContext.Provider>
+
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <UseReducerDemo></UseReducerDemo>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <UseCallBackDemo></UseCallBackDemo>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <UseMemoDemo numbers={[1,2,3,4]}></UseMemoDemo>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <UseRefDemo></UseRefDemo>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <UseCustomHook></UseCustomHook>
+    <br></br>
+    <br></br>
+    <hr></hr>
   </>
 );
 
