@@ -18,6 +18,9 @@ import UseCallBackDemo from "./hooks/UseCallBackDemo";
 import UseMemoDemo from "./hooks/UseMemoDemo";
 import UseRefDemo from "./hooks/UseRefDemo";
 import UseCustomHook from "./hooks/UseCustomHookDemo";
+import VoteCls from "./views/voteClass/VoteCls";
+import VoteFunc from "./views/voteFunc/VoteFunc";
+import VoteContext from "./views/voteContext/Vote";
 
 // const ThemeContext = React.createContext('light');
 
@@ -200,6 +203,15 @@ root.render(
     <br></br>
     <br></br>
     <hr></hr>
+    <VoteCls></VoteCls>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <VoteFunc></VoteFunc>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <VoteContext></VoteContext>
   </>
 );
 
