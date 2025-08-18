@@ -1,0 +1,17 @@
+.box {
+    background-color: #f0f0f0;
+}
+
+.box:hover {
+    background-color: #a05757;
+}
+
+.box .title {
+    color: #333;
+    font-size: 20px;
+}
+
+.description {
+    color: #6d5f5f;
+    font-size: 16px;
+}

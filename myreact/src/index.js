@@ -21,6 +21,9 @@ import UseCustomHook from "./hooks/UseCustomHookDemo";
 import VoteCls from "./views/voteClass/VoteCls";
 import VoteFunc from "./views/voteFunc/VoteFunc";
 import VoteContext from "./views/voteContext/Vote";
+import CssModule from "./views/cssModule/CssModule";
+import CreateStyle from "./views/createStyle/CreateStyle";
+import CreateStyleInClassComponent from "./views/hoc/CreateStyleInClassComponent";
 
 // const ThemeContext = React.createContext('light');
 
@@ -212,6 +215,18 @@ root.render(
     <br></br>
     <hr></hr>
     <VoteContext></VoteContext>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <CssModule></CssModule>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <CreateStyle width={"200px"}></CreateStyle>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <CreateStyleInClassComponent width={"300px"}></CreateStyleInClassComponent>
   </>
 );
 
