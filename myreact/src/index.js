@@ -21,6 +21,9 @@ import UseCustomHook from "./hooks/UseCustomHookDemo";
 import VoteCls from "./views/voteClass/VoteCls";
 import VoteFunc from "./views/voteFunc/VoteFunc";
 import VoteContext from "./views/voteContext/Vote";
+import VoteStoreFunc from "./views/voteStore/VoteStoreFunc";
+import store from "./store/VoteStore"
+import CommonContext from "./context/CommonContext";
 
 // const ThemeContext = React.createContext('light');
 
@@ -212,6 +215,12 @@ root.render(
     <br></br>
     <hr></hr>
     <VoteContext></VoteContext>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <CommonContext.Provider value={{store}}>
+        <VoteStoreFunc></VoteStoreFunc>
+    </CommonContext.Provider>
   </>
 );
 
