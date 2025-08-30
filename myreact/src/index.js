@@ -24,6 +24,8 @@ import VoteContext from "./views/voteContext/Vote";
 import VoteStoreFunc from "./views/voteStore/VoteStoreFunc";
 import store from "./store/VoteStore"
 import CommonContext from "./context/CommonContext";
+import VoteStoreActsFunc from "./views/voteStoreActs/VoteStoreActsFunc";
+import combilneReducerStore from "./store/combilneReducerStore";
 
 // const ThemeContext = React.createContext('light');
 
@@ -220,6 +222,12 @@ root.render(
     <hr></hr>
     <CommonContext.Provider value={{store}}>
         <VoteStoreFunc></VoteStoreFunc>
+    </CommonContext.Provider>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <CommonContext.Provider value={{combilneReducerStore}}>
+        <VoteStoreActsFunc></VoteStoreActsFunc>
     </CommonContext.Provider>
   </>
 );
