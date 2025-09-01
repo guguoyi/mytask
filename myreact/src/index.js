@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Provider } from "react-redux";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
@@ -26,6 +27,7 @@ import store from "./store/VoteStore"
 import CommonContext from "./context/CommonContext";
 import VoteStoreActsFunc from "./views/voteStoreActs/VoteStoreActsFunc";
 import combilneReducerStore from "./store/combilneReducerStore";
+import VoteStoreReactRedux from "./views/voteStoreReactRedux/VoteStoreReactRedux";
 
 // const ThemeContext = React.createContext('light');
 
@@ -229,6 +231,12 @@ root.render(
     <CommonContext.Provider value={{combilneReducerStore}}>
         <VoteStoreActsFunc></VoteStoreActsFunc>
     </CommonContext.Provider>
+    <br></br>
+    <br></br>
+    <hr></hr>
+    <Provider store={combilneReducerStore}>
+        <VoteStoreReactRedux></VoteStoreReactRedux>
+    </Provider>
   </>
 );
 

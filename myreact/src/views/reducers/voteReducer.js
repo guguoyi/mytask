@@ -1,8 +1,8 @@
 import  TYPES from "../actions/action-types"
 
 const initState = {
-    supNum : 0,
-    oppNum : 0
+    supNum : 1,
+    oppNum : 10
 }
 
 const voteReduer = function voteReduer(state=initState, action) {
