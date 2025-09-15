@@ -28,6 +28,9 @@ import CommonContext from "./context/CommonContext";
 import VoteStoreActsFunc from "./views/voteStoreActs/VoteStoreActsFunc";
 import combilneReducerStore from "./store/combilneReducerStore";
 import VoteStoreReactRedux from "./views/voteStoreReactRedux/VoteStoreReactRedux";
+import storeWithToolkit from "./store/storeWithToolkit";
+// import { Provider } from "react-redux";
+import TaskManagementSystem2 from "./views/taskManager/TaskManagementSystem2";
 
 // const ThemeContext = React.createContext('light');
 
@@ -172,6 +175,10 @@ root.render(
     {/* <TaskManagementSystem></TaskManagementSystem> */}
 
     {/* <TaskManagementSystem1></TaskManagementSystem1> */}
+
+    <Provider store={storeWithToolkit}>
+        <TaskManagementSystem2></TaskManagementSystem2>
+    </Provider>
 
     <UseStateDemo></UseStateDemo>
     <br></br>
